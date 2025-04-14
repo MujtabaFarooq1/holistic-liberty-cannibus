@@ -1,0 +1,52 @@
+@import "../../styles/config";
+
+.cartIcon {
+	width: 50px;
+	height: 48px;
+	display: inline-block;
+	border-radius: 32px 0px 0px 32px;
+	position: fixed;
+	/*top: 801px;*/
+	z-index: 99;
+	bottom: 50px;
+	right: 0;
+	background: $app-tomato url(./../../resources/images/Sticky_ShoppingCart_Icon.svg) center/24px no-repeat;
+	cursor: pointer;
+	transition: width 0.25s, padding 0.25s;
+	/*&.sticky {
+		position: fixed;
+		top: 50px;
+	}*/
+
+	&:hover {
+		width: 60px;
+		padding-right: 10px;
+		background: $app-yellow url(./../../resources/images/Sticky_ShoppingCart_Icon.svg) center/24px no-repeat;
+	}
+}
+
+.shopLocationPopup {
+	width: 100%;
+	position: fixed;
+	z-index: -1;
+	top: -100%;
+	opacity: 0;
+	transition: top 0.25s ease-in;
+
+	.blur-background {
+		margin-top: 0;
+		position: static;
+	}
+
+	.location-container {
+		width: 100%;
+	}
+}
+
+.location-bar-active {
+	.shopLocationPopup {
+		z-index: 5;
+		top: 70px;
+		opacity: 1;
+	}
+}

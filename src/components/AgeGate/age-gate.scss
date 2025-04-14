@@ -1,0 +1,198 @@
+@import "../../styles/config";
+
+.age-gate-container {
+  background: url("./../../resources/images/age-gate/Dark_Bkgd_TealBrick.webp");
+  background-color: $dark-green;
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100%;
+  min-height: 100vh;
+  min-width: 100%;
+  min-width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  z-index: 11000;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .inner-content {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+
+    .upper-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 29vh;
+
+      .desktop-logo {
+        max-width: 55%;
+      }
+
+      .mobile-logo {
+        max-width: 100px;
+        display: none;
+      }
+
+      .buttons-container {
+        text-align: center;
+        width: 100%;
+      }
+
+      .age-gate-btn {
+        border: 1px solid $app-white;
+        border-radius: 0px;
+        background-color: transparent;
+        color: white;
+        width: 150px;
+        height: 50px;
+        margin: 10px;
+        font-family: $ciutadellaBold;
+        font-size: 14px;
+        font-weight: bold;
+        box-sizing: border-box;
+        cursor: pointer;
+        outline: none !important;
+
+        &:hover {
+          background-color: $yellow;
+          border-color: $yellow;
+        }
+
+        @media (max-width: $breakpoint-small) {
+          width: 100% !important;
+          max-width: 150px;
+        }
+      }
+
+      .heading {
+        text-align: center;
+        color: $app-white;
+        margin-top: 45px;
+        margin-bottom: 12px;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.3px;
+        font-family: $ciutadellaBold;
+      }
+    }
+
+    .bottom-content {
+      .notice {
+        text-align: center;
+        font-family: $ciutadellaRegular;
+        font-size: 14px;
+        line-height: 22px;
+        color: $app-white;
+        margin-bottom: 10px;
+      }
+
+      .dark {
+        color: $light-green;
+        a {
+          text-decoration: none;
+          color: $light-green;
+
+          &:hover {
+            color: $app-white;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-large) {
+    .inner-content {
+      .upper-content {
+        width: 100%;
+        margin-top: 20vh;
+      }
+    }
+  }
+
+  @media (max-width: $breakpoint-small) {
+    .inner-content {
+      .upper-content {
+        margin-top: 10vh;
+
+        .desktop-logo {
+          display: none;
+        }
+
+        .mobile-logo {
+          display: block;
+          max-width: 60%;
+        }
+
+        .big-heading {
+          font-size: 50px;
+          line-height: 50px;
+          letter-spacing: -1px;
+        }
+      }
+    }
+  }
+
+  @media (max-height: 600px) {
+    .inner-content {
+      .upper-content {
+        margin-top: 15vh;
+      }
+
+      .bottom-content {
+        .notice {
+          margin-top: 20px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+.show-warning {
+  .inner-content {
+    justify-content: center;
+
+    .big-heading {
+      text-align: center;
+      color: $app-white;
+      font-size: 90px;
+      line-height: 90px;
+      letter-spacing: -1.8px;
+      font-family: $forzaBold;
+    }
+
+    .heading2 {
+      text-align: center;
+      color: $app-white;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 0.3px;
+      font-family: $ciutadellaRegular;
+      width: 526px;
+
+      @media (max-width: $breakpoint-small) {
+        width: auto;
+      }
+    }
+
+    .upper-content {
+      margin-top: 0;
+    }
+  }
+}

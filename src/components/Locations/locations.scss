@@ -1,0 +1,284 @@
+@import "../../styles/config";
+
+.locations-container {
+    width: 80%;
+    width: 80vw;
+    margin: auto; 
+
+    .h3-subheads-forza {
+        text-align: center;
+        margin-bottom: 36px;
+    }
+    .filter-nav {
+        margin: 0 0 58px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+
+        @media (max-width: 	$breakpoint-large) {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            justify-content: flex-start;
+        }
+    
+        button {
+            padding: 0;
+            margin: 0 15px;
+            border: none;
+            background: none;
+            color: $app-lime;
+
+            font-size: 14px;
+            line-height: 24px;
+            font-family: $ciutadellaBold;
+
+            letter-spacing: 0px;
+            text-transform: uppercase;
+            text-align: left;
+            cursor: pointer;
+            white-space: nowrap;
+
+            &.tab-scroll-icon {
+                display: none;
+                position: absolute;
+                outline: 0;
+                transition: all .5s;
+                z-index: 9;
+                border: 0;
+                opacity: 1;
+                cursor: pointer;
+
+                border-radius: 50%;
+                background: rgba(0,0,0,0.5);
+                min-width: 25px;
+                min-height: 25px;
+
+                @media (max-width: 	1180px) {
+                    display: inline-block !important;
+                }
+
+                &:before {
+                    color: $app-lime;
+                    // opacity: 0.2;
+                    font-size: 15px;
+                    display: block;
+                    font-family: revicons;
+                    text-align: center;
+                    z-index: 2;
+                    position: relative;
+                }
+
+                &.prev-tab {
+                    // left: calc(38% - 1px);
+                    // left: calc(25% + 1px);
+                    left: -2px;
+                    &:before {
+                        content: "\E824";
+                    }
+                }
+                &.next-tab {
+                    // right: calc(25% + 1px);
+                    right: -2px;
+
+                    &:before {
+                        content: "\E825";
+                    }
+                }
+            }
+        }
+    
+        .btn-loc-nav {
+            &:nth-child(2),
+            &:first-child {
+                margin-left: 0px !important;
+            }
+
+            &:nth-child(7),
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                margin-top: 0;
+                transition: margin 0.2s;
+            }
+            &:hover {
+                &:after {
+                    margin-top: 11.5px;
+                    border-bottom: 2px solid $app-lime;
+                }
+            }
+            &.active {
+                color: $dark-green;
+                &:after {
+                    margin-top: 11.5px;
+                    border-bottom: 2px solid $dark-green;
+                }
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        @media (min-width: 	$breakpoint-small) {
+            button {
+                margin: 0 30px;
+            }
+        }
+    
+        
+    }
+
+    .filtered-locations {
+
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 100px;
+
+        .location-content-wrap {
+            // width: 30%;
+            margin: 30px 0;
+            padding-right: 30px;
+            padding-left: 30px;
+            display: flex;
+            flex-flow: column nowrap;
+
+            @media (max-width: 1190px) {
+                width: 47%;
+            }
+
+            @media (max-width: $breakpoint-small) {
+                width: 100%;
+            }
+            @media (max-width: $breakpoint-very-small) {
+                margin: 30px 0px !important;
+                padding-left: 40px !important;
+            }
+
+            .map-link {
+                text-decoration: none;
+                &:hover,&:focus {
+                    text-decoration: none;
+                }
+            }
+
+            .h5-subheads-ciutadella {
+                display: flex;
+                text-align: left;
+                cursor: pointer;
+                // padding-left: 12px;
+                color: $app-black;
+                font-family: $ciutadellaBold;
+                font-size: 24px;
+                line-height: 30px;
+                letter-spacing: 0px;
+
+                span {
+                    margin-right: 11px;
+                    cursor: pointer;
+
+                    .icon-location-pin {
+                        cursor: pointer;
+                        svg {
+                            cursor: pointer;
+
+                            path:hover {
+                                fill: $app-yellow;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    
+                    .icon-location-pin {
+                        svg {
+                            path {
+                                fill: $app-yellow;
+                            }
+                        }  
+                    }
+                    
+                }
+
+            }
+
+            .address-container {
+                min-height: 88px;
+                text-align: left;
+                overflow-wrap: break-word;
+                margin-bottom: 20px;
+                a {
+                    color: $app-black;
+                }
+                p {
+                    font-family: $ciutadellaRegular;
+                    color: $app-black;
+                    font-size: 16px;
+                    line-height: 22px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                    margin-bottom: 0px;
+                }
+            }
+
+            .to-base {
+                margin-top: auto;
+
+                .store_hour_container {
+                    text-align: left;
+                    // margin-top: 20px;
+                    margin-bottom: 20px;
+                    height: 90px;
+    
+                    h6.h6-subheads-ciutadella {
+                        color: $app-black;
+                        font-family: $ciutadellaBold;
+                        font-size: 20px;
+                        line-height: 26px;
+                        letter-spacing: 0px;
+                    }
+    
+                    p {
+                        font-family: $ciutadellaRegular;
+                        color: $app-black;
+                        font-size: 16px;
+                        line-height: 22px;
+                        letter-spacing: 0px;
+                        text-align: left;
+                        margin-bottom: 0px;
+                      }
+                }
+    
+                .make_my_button {
+                    cursor: pointer;
+                    width: 100%;
+                    background-color: $app-lime;
+                    border-radius: 0px;
+    
+                    color: $white-color;
+                    font-family: $ciutadellaBold;
+                    font-size: 14px;
+                    line-height: 30px;
+                    letter-spacing: 0px;
+                    text-align: center;
+                    text-transform: uppercase;
+    
+                    margin-top:auto;
+                    padding-top: 10px;
+    
+                    // &:focus {
+                    //     outline: none;
+                    // }
+                    &:disabled {
+                        cursor: not-allowed !important;
+                    }
+                }
+            }
+        }
+    }
+
+}

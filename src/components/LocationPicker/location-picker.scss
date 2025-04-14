@@ -1,0 +1,86 @@
+@import "../../styles/config";
+
+.blur-background {
+  position: fixed;
+  background: #ffffff50;
+  backdrop-filter: blur(4px);
+  width: 100%;
+  height: 100vh;
+  top: $top-bar-height;
+  left: 0;
+  z-index: 20;
+  margin-top: $top-bar-height;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &.location-active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.location-picker-container {
+  width: 100%;
+  padding: 60px 10px;
+  margin-top: $top-bar-height;
+  position: fixed;
+  z-index: 0;
+  top: -110%;
+  left: 0;
+  background-color: $app-lime;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  transition: top 0.5s;
+
+  &.location-active {
+    top: 0;
+    z-index: 21;
+  }
+
+  .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    background: none;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .location-picker-img {
+    height: 60px;
+  }
+
+  .loc-pick-ques {
+    line-height: 28px;
+    margin-top: 36px;
+    margin-bottom: 5px;
+  }
+
+  .body-text a {
+    color: $app-black;
+    text-decoration: underline;
+  }
+
+  .zip-box {
+    display: flex;
+    justify-content: center;
+
+    .input-container {
+      width: 20%;
+      min-width: 266px;
+    }
+  }
+
+  .react-autosuggest__suggestions-container {
+    overflow: scroll;
+    max-height: 40vh;
+    text-align: left;
+  }
+}

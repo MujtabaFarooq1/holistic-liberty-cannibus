@@ -1,0 +1,176 @@
+@import "../../styles/config";
+.shop-page,
+.vanshop-comingsoon {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	> .inner-wrap-wide {
+        padding-top: 91px;
+        padding-bottom: 60px;
+
+		.description {
+			display: flex;
+			width: 100%;
+			max-width: 100%;
+
+			margin: 0 auto;
+			padding: 0 10px;
+
+			@media (max-width: 920px) {
+				flex-direction: column;
+			}
+
+			.images-wrapper {
+				display: flex;
+				width: 60%;
+				max-width: 100%;
+				max-height: 350px;
+
+				@media (max-width: 920px) {
+					width: 100%;
+					max-height: 400px;
+				}
+				.img-wrap {
+					// width: 50%;
+					max-width: 100%;
+					margin-right: 10px;
+
+
+					.store-image {
+						vertical-align: middle;
+						max-width: 100%;
+						height: 100%;
+						max-height: 100%;
+
+						max-height: 350px;
+
+						@media (max-width: 920px) {
+							max-height: 400px;
+						}
+					}
+				}
+			}
+			.text-content {
+				width: 40%;
+				max-width: 100%;
+
+				color: $app-black;
+
+				font-family: $ciutadellaRegular;
+
+				font-size: 22px;
+				line-height: 28px;
+				letter-spacing: 0px;
+
+				text-align: left;
+				padding: 0 10px;
+
+				@media (max-width: 920px) {
+					width: 100%;
+					margin-top: 20px;
+					padding: 10px 0px;
+				}
+			}
+		}
+	}
+	.sr-title {
+		margin-bottom: 11px;
+		color: $app-black;
+		font: normal normal bold 24px/30px "Ciutadella Bold";
+	}
+
+	.sr-query {
+		padding: 10px 0 23px;
+		border-bottom: 1px solid $app-light-grey;
+		display: block;
+		color: $app-black;
+		font: normal normal bold 90px/76px "Forza Bold";
+		letter-spacing: -1.8px;
+		text-transform: uppercase;
+
+		@media (max-width: $breakpoint-small) {
+			padding-bottom: 10px;
+			font: normal normal bold 28px/35px "Forza Bold";
+			letter-spacing: -0.56px;
+		}
+    }
+
+}
+
+.menu-container {
+    margin: 100px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    text-align: center;
+    @media (max-width: 920px) {
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      top: 50px;
+    }
+
+  .menu-container__header h1 {
+    text-align: center;
+    font-size: 30px;
+    line-height: 32px;
+    font-family: Forza Bold,sans-serif;
+    color: #183029;
+    @media (max-width: 920px) {
+      font-size: 24px;
+    }
+  }
+  .btn-wrapper {
+    display: flex;
+    .menu-container__btn {
+      margin-left: 20px;
+      .menu-btn {
+        margin-bottom: 10px;
+        display: inline-block;
+        background-color: #f1f2f3;
+        // background-color: #cccccc;
+        color: #183029;
+        width: 10em;
+        font-family: Ciutadella Bold,sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 6px;
+        text-transform: uppercase;
+        padding: 15px;
+        &.active {
+          background-color: #183029 !important;
+          color: #fff !important;
+        }
+        @media (max-width: 920px) {
+          font-size: 16px;
+          width: 9em;
+        }
+      }
+    }
+  }
+  // .choose-menu {
+  //   text-align: center;
+  //   font-size: 18px;
+    p {
+      font-family: Ciutadella Regular,sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 22px;
+      letter-spacing: 1px;
+      color: #183029;
+      @media (max-width: 920px) {
+        font-size: 16px;
+      }
+    }
+  // }
+}

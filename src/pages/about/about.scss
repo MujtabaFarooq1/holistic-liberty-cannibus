@@ -1,0 +1,1268 @@
+@import "../../styles/config";
+
+.about-content {
+  .about-banner {
+    background: url(../../resources/images/about/about_banner_image.webp)
+      no-repeat left top rgba(0, 0, 0, 0);
+    background-size: cover;
+    height: 360px;
+    padding-top: 80px;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: 991px) {
+      background-position: right center;
+    }
+
+    @media only screen and (max-width: 767px) {
+      background-position: center;
+    }
+
+    @media only screen and (max-width: 575px) {
+      background: $dark-orange;
+      height: 300px;
+      padding-top: 85px;
+    }
+
+    .title-container {
+      display: block;
+      width: 974px;
+      margin: 0px auto;
+
+      @media only screen and (max-width: 1199px) {
+        width: 850px;
+      }
+
+      @media only screen and (max-width: 991px) {
+        width: 700px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        width: 590px;
+      }
+
+      @media only screen and (max-width: 639px) {
+        width: 500px;
+      }
+
+      @media only screen and (max-width: 575px) {
+        width: 325px;
+      }
+
+      h1 {
+        font-family: $forzaBold;
+        font-size: 90px;
+        font-weight: 700;
+        line-height: 76px;
+        letter-spacing: -1.8px;
+        color: $app-black;
+        margin: 0px 0px 20px;
+        width: 485px;
+
+        @supports (-moz-appearance: none) {
+          width: 500px;
+          letter-spacing: -2.5px;
+        }
+
+        @media only screen and (max-width: 575px) {
+          font-size: 50px;
+          line-height: 42px;
+          letter-spacing: -1px;
+          width: auto;
+        }
+      }
+
+      .sub-title {
+        font-family: $ciutadellaRegular;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        color: $app-black;
+        margin: 0px 0px 0px 6px;
+        width: 476px;
+
+        @media only screen and (max-width: 575px) {
+          width: auto;
+          margin: 0px;
+        }
+
+        a {
+          color: $app-black;
+          text-decoration: underline;
+
+          &:hover {
+            color: $app-green;
+          }
+        }
+      }
+    }
+  }
+
+  .aboutpage-container {
+    display: block;
+    margin: 0px auto;
+    width: 964px;
+    padding: 46px 0px 100px;
+
+    @media only screen and (max-width: 1199px) {
+      width: 900px;
+    }
+
+    @media only screen and (max-width: 991px) {
+      width: 700px;
+      padding: 50px 0px 80px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      width: 590px;
+      padding: 50px 0px 80px;
+    }
+
+    @media only screen and (max-width: 639px) {
+      width: 500px;
+    }
+
+    @media only screen and (max-width: 575px) {
+      width: 100%;
+      padding: 100px 0px;
+    }
+
+    .cannabis-intro-section {
+      display: flex;
+      border-bottom: 1px solid $app-light-grey;
+
+      @media only screen and (max-width: 767px) {
+        display: block;
+      }
+
+      .text-section {
+        padding-top: 47px;
+        padding-right: 100px;
+
+        @media only screen and (max-width: 991px) {
+          padding-top: 40px;
+          padding-right: 0px;
+        }
+
+        @media only screen and (max-width: 767px) {
+          padding: 0px 0px 40px;
+        }
+
+        @media only screen and (max-width: 575px) {
+          width: 325px;
+          margin: 0px auto;
+        }
+
+        h3 {
+          font-family: $forzaBold;
+          font-size: 30px;
+          font-weight: 700;
+          line-height: 32px;
+          letter-spacing: -0.3px;
+          color: $app-black;
+          margin: 0px 0px 23px 0px;
+        }
+
+        p {
+          font-family: $ciutadellaRegular;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+          color: $app-black;
+          margin-bottom: 35px;
+
+          @media only screen and (max-width: 575px) {
+            margin-bottom: 23px;
+          }
+        }
+
+        .lime-link-btn {
+          display: inline-block;
+          width: 328px;
+          background-color: $app-lime;
+          font-family: $ciutadellaBold;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: normal;
+          color: $white-color;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 15px 0px 14px;
+
+          &:hover {
+            background: $yellow;
+          }
+
+          @media only screen and (max-width: 575px) {
+            width: 100%;
+          }
+        }
+      }
+
+      .image-right {
+        @media only screen and (max-width: 767px) {
+          text-align: center;
+        }
+
+        img {
+          @media only screen and (max-width: 991px) {
+            // height: 330px;
+            width: auto;
+          }
+
+          @media only screen and (max-width: 575px) {
+            // width: 340px;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .cannabis-brands-section {
+      display: flex;
+      margin-top: 100px;
+
+      @media only screen and (max-width: 991px) {
+        margin-top: 80px;
+      }
+
+      @media only screen and (max-width: 639px) {
+        display: block;
+      }
+
+      @media only screen and (max-width: 639px) {
+        margin-top: 100px;
+      }
+
+      .text-section {
+        display: inline-block;
+        padding: 0px 114px 0px 0px;
+
+        @media only screen and (max-width: 1199px) {
+          padding: 0px 70px 0px 0px;
+        }
+
+        @media only screen and (max-width: 991px) {
+          padding: 0px 30px 0px 0px;
+        }
+
+        @media only screen and (max-width: 639px) {
+          padding: 0px;
+          margin-bottom: 30px;
+        }
+
+        @media only screen and (max-width: 575px) {
+          display: block;
+          width: 325px;
+          margin: 0px auto 30px;
+        }
+
+        h3 {
+          font-family: $forzaBold;
+          font-size: 30px;
+          font-weight: 700;
+          line-height: 32px;
+          letter-spacing: -0.3px;
+          color: $app-black;
+          margin: 0px 0px 23px 0px;
+        }
+
+        p {
+          font-family: $ciutadellaRegular;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+          color: $app-black;
+          margin-bottom: 15px;
+
+          &:last-child {
+            margin-bottom: 0px;
+          }
+
+          a {
+            text-decoration: underline;
+            color: $app-black;
+
+            &:hover {
+              color: $app-green;
+            }
+          }
+        }
+      }
+
+      .logos-right {
+        display: inline-block;
+        min-width: 376px;
+
+        @media only screen and (max-width: 991px) {
+          min-width: 250px;
+        }
+
+        @media only screen and (max-width: 639px) {
+          display: block;
+          width: 100%;
+          text-align: center;
+          max-width: 360px;
+          margin: 0px auto;
+        }
+
+        .brand-logo {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 180px;
+          height: 146px;
+
+          @media only screen and (max-width: 991px) {
+            width: 120px;
+            height: 97px;
+          }
+
+          @media only screen and (max-width: 639px) {
+            width: 158px;
+            height: 128px;
+          }
+
+          a {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-content: center;
+            justify-content: center;
+            position: relative;
+          }
+
+          &:nth-child(2n + 1) {
+            margin-right: 16px;
+
+            @media only screen and (max-width: 991px) {
+              margin-right: 10px;
+            }
+          }
+
+          &:nth-child(1),
+          &:nth-child(2) {
+            margin-bottom: 20px;
+
+            @media only screen and (max-width: 991px) {
+              margin-bottom: 10px;
+            }
+          }
+
+          &:hover {
+            background-color: $app-white;
+          }
+
+          img {
+            max-width: 100%;
+            margin: 0px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: 18px;
+            object-fit: scale-down !important;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+
+    .liberty-cares-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 92px;
+
+      @media only screen and (max-width: 991px) {
+        margin-top: 80px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        display: block;
+        margin-top: 95px;
+      }
+
+      .text-section {
+        background-color: $app-yellow;
+        padding: 65px 91px 69px 98px;
+
+        @media only screen and (max-width: 1199px) {
+          padding: 65px 60px 69px 60px;
+        }
+
+        @media only screen and (max-width: 991px) {
+          padding: 40px 30px;
+        }
+
+        @media only screen and (max-width: 575px) {
+          margin: 0px auto;
+          width: 325px;
+          padding: 60px 20px;
+        }
+
+        h4 {
+          font-family: $forzaBold;
+          font-size: 30px;
+          font-weight: 700;
+          line-height: 32px;
+          letter-spacing: -0.3px;
+          text-transform: uppercase;
+          color: $dark-orange;
+          margin: 0px 0px 20px 0px;
+        }
+
+        p {
+          font-family: $ciutadellaRegular;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+          color: $app-black;
+          margin-bottom: 18px;
+        }
+        .transparent-link-btn {
+          display: inline-block;
+          width: 328px;
+          background-color: transparent;
+          font-family: $ciutadellaBold;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: normal;
+          color: $white-color;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 15px 0px 14px;
+          border: 1px solid $white-color;
+
+          @media only screen and (max-width: 575px) {
+            width: 285px;
+          }
+
+          &:hover {
+            background: $yellow;
+          }
+        }
+      }
+
+      .image-right {
+        img {
+          @media only screen and (max-width: 991px) {
+            height: 406px;
+            width: auto;
+          }
+
+          @media only screen and (max-width: 767px) {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .employee-section {
+      display: block;
+      margin-top: 102px;
+      background-image: url("../../resources/images/home/testimonialBg.webp");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-color: rgba(186, 198, 195, 0.3);
+      padding: 50px;
+      position: relative;
+
+      @media only screen and (max-width: 991px) {
+        margin-top: 80px;
+        padding: 40px;
+      }
+
+      @media only screen and (max-width: 575px) {
+        margin-top: 100px;
+        padding: 50px 46px;
+      }
+
+      .upper-quote-img {
+        position: absolute;
+        top: 29px;
+        left: 31px;
+        z-index: 2;
+      }
+
+      .employee-reviews-carousel {
+        display: block;
+        background-color: $white-color;
+        width: 100%;
+        padding: 70px 61px 60px 76px;
+        position: relative;
+
+        @media only screen and (max-width: 991px) {
+          height: 370px;
+          padding: 70px 50px 40px 50px;
+        }
+
+        @media only screen and (max-width: 767px) {
+          height: auto;
+        }
+
+        @media only screen and (max-width: 575px) {
+          padding: 68px 19px 52px 19px;
+        }
+
+        .review-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+
+          h5 {
+            font-family: $ciutadellaBold;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            color: $app-black;
+            margin: 0px 0px 20px 0px;
+
+            @media only screen and (max-width: 575px) {
+              padding: 0px 16px;
+            }
+          }
+
+          p {
+            font-family: $ciutadellaMedium;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0.84px;
+            color: $app-grey;
+            text-transform: uppercase;
+            margin: 0px;
+
+            @media only screen and (max-width: 575px) {
+              padding: 0px 16px;
+            }
+          }
+
+          a {
+            &:hover {
+              text-decoration: none;
+            }
+          }
+
+          .lime-link-btn {
+            display: block;
+            margin: 22px auto 0px;
+            width: 328px;
+            background-color: $app-lime;
+            font-family: $ciutadellaBold;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: normal;
+            color: $white-color;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 15px 0px 14px;
+
+            @media only screen and (max-width: 575px) {
+              width: 245px;
+            }
+
+            &:hover {
+              background: $yellow;
+            }
+          }
+        }
+
+        .react-multi-carousel-dot-list {
+          bottom: -28px;
+          z-index: 10;
+
+          @media only screen and (max-width: 991px) {
+            bottom: -23px;
+          }
+
+          @media only screen and (max-width: 575px) {
+            bottom: -28px;
+          }
+
+          li {
+            margin: 0px 10px 0px 0px;
+            line-height: 6px;
+
+            button {
+              width: 6px;
+              height: 6px;
+              border: none;
+              border-radius: 100%;
+              margin: 0px;
+              background-color: $input-border-grey;
+            }
+
+            &.react-multi-carousel-dot--active button {
+              background-color: $app-black;
+            }
+
+            &:last-child {
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+    }
+
+    hr {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $app-light-grey;
+      border: 0px;
+      margin-top: 101px;
+      margin-bottom: 0px;
+
+      @media only screen and (max-width: 991px) {
+        margin-top: 80px;
+      }
+
+      @media only screen and (max-width: 575px) {
+        margin-top: 100px;
+      }
+    }
+
+    .locations-section {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 100px;
+
+      @media only screen and (max-width: 991px) {
+        margin-top: 80px;
+        align-items: center;
+      }
+
+      @media only screen and (max-width: 767px) {
+        display: block;
+      }
+
+      @media only screen and (max-width: 575px) {
+        margin-top: 100px;
+      }
+
+      .left-text-section {
+        display: inline-block;
+
+        @media only screen and (max-width: 767px) {
+          margin-bottom: 50px;
+        }
+
+        @media only screen and (max-width: 575px) {
+          display: block;
+          width: 325px;
+          margin: 0px auto 50px;
+        }
+
+        .left-text-width {
+          display: inline-block;
+          width: 461px;
+
+          @media only screen and (max-width: 991px) {
+            width: 340px;
+          }
+
+          @media only screen and (max-width: 767px) {
+            width: 100%;
+          }
+
+          h3 {
+            font-family: $forzaBold;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 32px;
+            letter-spacing: -0.3px;
+            color: $app-black;
+            margin: 0px 0px 23px 0px;
+
+            @media only screen and (max-width: 575px) {
+              width: 250px;
+            }
+          }
+
+          p {
+            font-family: $ciutadellaRegular;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            color: $app-black;
+            margin-bottom: 20px;
+
+            @media only screen and (max-width: 575px) {
+              margin-bottom: 35px;
+            }
+          }
+
+          .condense-text {
+            letter-spacing: -0.16px;
+
+            @media only screen and (max-width: 575px) {
+              letter-spacing: 0px;
+            }
+          }
+
+          h5 {
+            font-family: $ciutadellaBold;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            letter-spacing: 0px;
+            color: $app-black;
+            margin: 0px 0px 18px 0px;
+          }
+        }
+
+        .location-select {
+          display: inline-block;
+          vertical-align: top;
+          width: 286px;
+          height: 48px;
+          border: 1px solid $app-lime;
+          border-radius: 0px;
+          font-family: $ciutadellaSemiBold;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 22px;
+
+          &:focus {
+            outline: none;
+          }
+
+          @media only screen and (max-width: 991px) {
+            width: 229px;
+          }
+
+          .Dropdown-control {
+            border: none;
+            // border: 1px solid $app-lime;
+            color: $app-black;
+            border-radius: 0px;
+            padding: 12px 52px 12px 26px;
+
+            @media only screen and (max-width: 991px) {
+              padding: 12px 40px 12px 16px;
+            }
+
+            .Dropdown-arrow {
+              right: 16px;
+              top: 20px;
+              border-color: $app-lime transparent transparent;
+            }
+          }
+          .Dropdown-menu.dropdown-state-menu {
+            .loc-disabled {
+              cursor: none;
+              pointer-events: none;
+              opacity: 0.6;
+            }
+          }
+        }
+
+        .location-select.is-open .Dropdown-control .Dropdown-arrow {
+          border-color: transparent transparent $app-lime;
+        }
+
+        .lime-btn {
+          display: inline-block;
+          vertical-align: top;
+          width: 188px;
+          height: 48px;
+          font-family: $ciutadellaBold;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: normal;
+          color: $white-color;
+          text-transform: uppercase;
+          background-color: $app-lime;
+          border: 0px;
+          border-radius: 0px;
+
+          &:hover {
+            background-color: $yellow;
+          }
+
+          &:focus {
+            outline: none;
+          }
+
+          @media only screen and (max-width: 991px) {
+            width: 97px;
+            line-height: 16px;
+            padding: 10px;
+          }
+
+          @media only screen and (max-width: 575px) {
+            width: 96px;
+          }
+        }
+      }
+
+      .right-text-section {
+        display: inline-block;
+        width: 363px;
+        background-color: rgba(186, 198, 195, 0.2);
+        padding: 22px 23px;
+
+        @media only screen and (max-width: 991px) {
+          width: 326px;
+          padding: 20px 0px 20px 15px;
+        }
+
+        @media only screen and (max-width: 767px) {
+          width: 100%;
+        }
+
+        @media only screen and (max-width: 575px) {
+          display: block;
+          margin: 0px auto;
+          width: 325px;
+        }
+
+        h5 {
+          font-family: $ciutadellaBold;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 30px;
+          letter-spacing: 0px;
+          color: $app-black;
+          margin: 0px 0px 25px 0px;
+        }
+
+        .store-addres {
+          display: block;
+          margin-bottom: 15px;
+
+          strong {
+            display: block;
+            font-family: $ciutadellaBold;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            color: $app-black;
+            margin-bottom: 4px;
+          }
+
+          p {
+            font-family: $ciutadellaRegular;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            color: $app-black;
+            margin: 0px;
+          }
+        }
+
+        .store-timing {
+          display: block;
+
+          strong {
+            display: block;
+            font-family: $ciutadellaBold;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
+            color: $app-black;
+            margin-bottom: 4px;
+          }
+
+          p {
+            font-family: $ciutadellaRegular;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22px;
+            color: $app-black;
+            margin: 0px;
+          }
+
+          .small-text {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .testimonials-section {
+      display: block;
+      margin-top: 100px;
+      background-image: url("../../resources/images/home/testimonialBg.webp");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-color: rgba(186, 198, 195, 0.3);
+      padding: 50px;
+      position: relative;
+
+      @media only screen and (max-width: 991px) {
+        margin-top: 80px;
+        padding: 40px;
+      }
+
+      @media only screen and (max-width: 575px) {
+        margin-top: 100px;
+        padding: 50px;
+      }
+
+      .testimonials-carousel {
+        display: block;
+        background-color: $white-color;
+        width: 100%;
+        padding: 60px 61px 60px 76px;
+        position: relative;
+
+        @media only screen and (max-width: 991px) {
+          padding: 50px 60px;
+        }
+
+        @media only screen and (max-width: 767px) {
+          height: auto;
+        }
+
+        @media only screen and (max-width: 575px) {
+          padding: 68px 33px 52px 33px;
+        }
+
+        .review-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          height: 100%;
+
+          h5 {
+            font-family: $ciutadellaBold;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            color: $app-black;
+            margin: 0px 0px 20px 0px;
+          }
+
+          p {
+            font-family: $ciutadellaMedium;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0.84px;
+            color: $app-grey;
+            text-transform: uppercase;
+            margin: 0px;
+          }
+
+          .lime-link-btn {
+            display: block;
+            margin: 22px auto 0px;
+            width: 328px;
+            background-color: $app-lime;
+            font-family: $ciutadellaBold;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 30px;
+            color: $white-color;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 9px 0px;
+
+            &:hover {
+              background: $yellow;
+            }
+          }
+        }
+
+        .react-multi-carousel-dot-list {
+          bottom: -28px;
+          z-index: 10;
+
+          @media only screen and (max-width: 991px) {
+            bottom: -23px;
+          }
+
+          @media only screen and (max-width: 575px) {
+            bottom: -28px;
+          }
+
+          li {
+            margin: 0px 10px 0px 0px;
+            line-height: 6px;
+
+            button {
+              width: 6px;
+              height: 6px;
+              border: none;
+              border-radius: 100%;
+              margin: 0px;
+              background-color: $input-border-grey;
+            }
+
+            &.react-multi-carousel-dot--active button {
+              background-color: $app-black;
+            }
+
+            &:last-child {
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+
+      .lower-quote-img {
+        position: absolute;
+        bottom: 39px;
+        right: 36px;
+        z-index: 2;
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+
+        @media only screen and (max-width: 767px) {
+          bottom: 30px;
+          right: 30px;
+        }
+
+        @media only screen and (max-width: 575px) {
+          bottom: 33px;
+          right: 23px;
+        }
+      }
+    }
+
+    .liberty-rewards-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 92px;
+
+      @media only screen and (max-width: 991px) {
+        margin-top: 80px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        display: block;
+      }
+
+      @media only screen and (max-width: 575px) {
+        margin-top: 100px;
+      }
+
+      .image-left {
+        img {
+          @media only screen and (max-width: 991px) {
+            height: 370px;
+          }
+
+          @media only screen and (max-width: 767px) {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      .text-section {
+        background-color: $app-tomato;
+        padding: 86px 65px 83px 114px;
+
+        @media only screen and (max-width: 1199px) {
+          padding: 86px 65px 83px 90px;
+        }
+
+        @media only screen and (max-width: 991px) {
+          padding: 40px 30px;
+        }
+
+        @media only screen and (max-width: 575px) {
+          width: 325px;
+          margin: 0px auto;
+          padding: 60px 30px;
+        }
+
+        h4 {
+          font-family: $forzaBold;
+          font-size: 30px;
+          font-weight: 700;
+          line-height: 32px;
+          letter-spacing: -0.3px;
+          text-transform: uppercase;
+          color: $dark-orange;
+          margin: 0px 0px 20px 0px;
+        }
+
+        p {
+          font-family: $ciutadellaRegular;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+          color: $app-black;
+          margin-bottom: 18px;
+        }
+        .transparent-link-btn {
+          display: inline-block;
+          width: 328px;
+          background-color: transparent;
+          font-family: $ciutadellaBold;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: normal;
+          color: $white-color;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 15px 0px 14px;
+          border: 1px solid $white-color;
+
+          @media only screen and (max-width: 575px) {
+            width: 100%;
+          }
+
+          &:hover {
+            background: $yellow;
+          }
+        }
+      }
+    }
+
+    .desktop-img {
+      display: block;
+
+      @media only screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .mobile-img {
+      display: none;
+
+      @media only screen and (max-width: 767px) {
+        display: block;
+      }
+    }
+  }
+}
+
+.modal-dialog-centered {
+  justify-content: center !important;
+}
+
+.about-modal {
+  background-color: $app-tomato !important;
+  border: 0px !important;
+  border-radius: 0px !important;
+  width: 376px !important;
+  height: 279px !important;
+
+  @media only screen and (max-width: 575px) {
+    width: 326px !important;
+  }
+
+  .modal-header {
+    border: 0px;
+    padding: 0px;
+
+    .close {
+      width: 20px;
+      margin: 10px 12px 0px auto;
+      padding: 0px;
+      height: 20px;
+      opacity: 1;
+
+      &:hover {
+        opacity: 1 !important;
+      }
+
+      &:focus {
+        opacity: 1 !important;
+      }
+
+      span {
+        font-size: 32px;
+        font-weight: 400;
+        color: $white-color;
+        opacity: 1;
+        line-height: 20px;
+        text-shadow: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .modal-body {
+    text-align: center;
+    padding: 45px 32px 50px 32px;
+
+    h4 {
+      font-family: $forzaBold;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 32px;
+      letter-spacing: -0.3px;
+      text-transform: uppercase;
+      color: $dark-orange;
+      margin-bottom: 15px;
+    }
+
+    p {
+      width: 236px;
+      font-family: $ciutadellaRegular;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      color: $white-color;
+      margin: 0px auto 18px;
+    }
+
+    button {
+      width: 148px;
+      height: 48px;
+      border: 1px solid $white-color;
+      font-family: $ciutadellaBold;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 30px;
+      color: $white-color;
+      letter-spacing: 0px;
+      text-transform: uppercase;
+      border-radius: 0px;
+      background: transparent;
+      display: inline-block;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:active {
+        background: transparent !important;
+        border-color: $white-color !important;
+      }
+
+      &:active:focus {
+        box-shadow: none !important;
+      }
+
+      &:hover {
+        background-color: $yellow;
+      }
+
+      &:first-child {
+        margin: 0px 8px 0px 0px;
+      }
+
+      &:last-child {
+        margin: 0px 0px 0px 8px;
+      }
+
+      @media only screen and (max-width: 575px) {
+        width: 125px !important;
+      }
+    }
+  }
+}

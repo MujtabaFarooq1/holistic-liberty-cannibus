@@ -1,0 +1,56 @@
+@import "../styles/config";
+
+.not-found-page {
+	> .inner-wrap-wide {
+		padding-top: 91px;
+	}
+
+	.nfp-title {
+		margin-bottom: 0;
+		color: $app-black;
+		font: normal normal bold 24px/30px "Ciutadella Bold";
+	}
+
+	.nfp-query {
+		padding: 10px 0 94px;
+		border-bottom: 1px solid $app-light-grey;
+		margin-bottom: 100px;
+		display: block;
+		color: $app-black;
+		font: normal normal bold 90px/76px "Forza Bold";
+		letter-spacing: -1.8px;
+		text-transform: uppercase;
+
+		@media (max-width: $breakpoint-small) {
+			border-color: transparent;
+			position: relative;
+			font: normal normal bold 50px/55px "Forza Bold";
+			letter-spacing: -0.56px;
+
+			&:after {
+				content: '';
+				width: 100vw;
+				border-bottom: 1px solid $app-light-grey;
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	.not-finding {
+		margin-bottom: 20px;
+		font: normal normal bold 30px/32px "Forza Bold";
+		letter-spacing: -0.3px;
+		color: $app-black;
+	}
+
+	.not-finding-description {
+		margin-bottom: 46px;
+		font: normal normal normal 16px/22px "Ciutadella Regular";
+		letter-spacing: 0px;
+		color: $app-black;
+	}
+}

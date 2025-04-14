@@ -1,0 +1,30 @@
+const learnStrings =
+{
+	title: "Learn",
+    link: "/learn/",
+    description: "Explore the topics below for answers to the questions we get the most. Still stuck? Shoot us an email or give us a call! Know before you go, For new patients, Discounts & Rewards, General",
+    learn_title: "Learn",
+	learnShootEmailUrl: "/contact-us/#contact-us-form-tag",
+	learnForNewPatientTitle: "For new patients",
+	learnDiscountTitle: "Discounts",
+	learnRewardsTabTitle: "Liberty Wallet & Rewards",
+	learnDiscountDescription: "Liberty is proud to offer 20% off for Veterans, 10% off for Senior Citizens (60+), and 10% off for Industry Employees. Discounts cannot be combined with any other offers or discounts. Note: Price shown does not reflect any price adjustments, tiered pricing, or discounts/promotions that may be applied at the time of pickup.",
+	learnMADiscountDescription: "Liberty is proud to offer 20% off for Veterans, 10% off for Senior Citizens (60+), and 10% off for Industry Employees. Discounts cannot be combined with any other offers or discounts. Note: Price shown does not reflect any price adjustments, tiered pricing, or discounts/promotions that may be applied at the time of pickup.",
+	learnMDDiscountDescription: "Liberty is proud to offer 20% off for Veterans, 10% off for Senior Citizens (60+), and 10% off for Industry Employees. Discounts cannot be combined with any other offers or discounts. Note: Price shown does not reflect any price adjustments, tiered pricing, or discounts/promotions that may be applied at the time of pickup.",
+	learnDiscountButtonTitle: "Shop Now",
+	learnDiscountButtonUrl: "/shop/",
+	learnRewardsTitle: "Rewards",
+	learnRewardsDescription: "Liberty Rewards is the easiest way to get rewarded for doing what you already love: shopping at Liberty. If you’ve downloaded the Liberty Wallet app, you are already enrolled and earning credits! You can also earn monthly perks with app purchases. Visit the Rewards page to learn more.",
+	learnRewardsButtonTitle: "Learn More",
+	learnRewardsButtonUrl: "/rewards/",
+	learnGeneralFAQsTitle: "General Dispensary FAQs",
+	learnMoreQuestionsTitle: "More questions?",
+	learnMoreQuestionsDescription: "Get in touch!",
+	learnMoreQuestionsURL: "/contact-us/",
+	learnBannerDescription: "Explore the topics below for answers to the questions we get the most.",
+	learnKnowBeforeYoGoTitle: "Know before you go",
+	learnAboutLiberty: "You are learning about Liberty",
+	learnNoFaqFound: "No FAQs found for this location -",
+}
+
+module.exports = learnStrings

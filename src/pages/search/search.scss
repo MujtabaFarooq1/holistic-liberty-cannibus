@@ -1,0 +1,130 @@
+@import "../../styles/config";
+
+
+/*Search Result and Search No result page styling*/
+.search-result {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	> .inner-wrap-wide {
+		padding-top: 91px;
+	}
+	.sr-title {
+		margin-bottom: 11px;
+		color: $app-black;
+		font: normal normal bold 24px/30px "Ciutadella Bold";
+	}
+
+	.sr-query {
+		padding: 10px 0 23px;
+		border-bottom: 1px solid $app-light-grey;
+		display: block;
+		color: $app-black;
+		font: normal normal bold 90px/76px "Forza Bold";
+		letter-spacing: -1.8px;
+		text-transform: uppercase;
+
+		@media (max-width: $breakpoint-small) {
+			padding-bottom: 10px;
+			font: normal normal bold 28px/35px "Forza Bold";
+			letter-spacing: -0.56px;
+		}
+	}
+
+	.search-subheading {
+		margin: 42px 0 32px;
+		display: inline-block;
+		color: $app-lime;
+		font: normal normal bold 14px/30px "Ciutadella Bold";
+		text-decoration: none;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $app-lime;
+			text-decoration: none;
+		}
+
+		@media (max-width: $breakpoint-small) {
+			margin-bottom: 22px;
+		}
+	}
+
+	.search-item-title {
+		margin-bottom: 15px;
+		color: $app-black;
+		font: normal normal bold 24px/30px "Ciutadella Bold";
+	}
+
+	.search-item-link {
+		color: $app-black;
+		text-decoration: none;
+		&:hover {
+			color: $app-black;
+			text-decoration: none;
+		}
+	}
+
+	.search-item-description {
+		margin-bottom: 38px;
+		color: $app-black;
+		font: normal normal normal 16px/22px "Ciutadella Regular";
+	}
+
+	.not-finding {
+		padding-top: 100px;
+		border-top: 1px solid $app-light-grey;
+		margin-top: 100px;
+		margin-bottom: 20px;
+		position: relative;
+		color: $app-black;
+		font: normal normal bold 30px/32px "Forza Bold";
+		letter-spacing: -0.3px;
+
+		@media (max-width: $breakpoint-small) {
+			border-top-color: transparent;
+			&:before {
+				content: '';
+				width: 100vw;
+				border-top: 1px solid $app-light-grey;
+				display: block;
+				position: absolute;
+				left: 50%;
+				top: -1px;
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	.not-finding-description {
+		margin-bottom: 46px;
+		color: $app-black;
+		font: normal normal normal 16px/22px "Ciutadella Regular";
+	}
+
+	/*.sr-not-found-query {
+		color: #FF00FF;
+	}*/
+
+	.sr-not-found-description {
+		margin: 72px 0 63px;
+		font: normal normal bold 24px/30px "Ciutadella Bold";
+	}
+
+	.search-blog-post {
+		.search-item-description {
+			img {
+				width: 100px;
+				margin-right: 15px;
+				float: left;
+			}
+		}
+	}
+
+}

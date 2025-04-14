@@ -1,0 +1,1014 @@
+@import "../styles/config";
+
+.home-page {
+  .home-page-title {
+    width: 100%;
+    height: 65%;
+    /*height: 65vh;*/
+    min-height: 640px;
+    display: flex;
+    background-color: $home-header;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-image: url("../resources/images/home/home-title.webp");
+    /*background-size: cover;*/
+    background-position: left 70px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    @media (min-width: 1440px) {
+      background-size: 100% auto;
+    }
+
+    @media (max-width: $breakpoint-small) {
+      background-image: none !important;
+
+      min-height: 200px;
+    }
+
+    .store-title-container {
+      /*margin-left: 17vw;*/
+      /*max-width: 77vw;*/
+      max-width: 87%;
+      width: 964px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      > a {
+        max-width: 123px;
+        @supports (-moz-appearance: none) {
+          max-width: 125px;
+        }
+      }
+
+      /*@media (max-width: 1386px) {
+                margin-left: 240px;
+            }*/
+
+      @media (max-width: $breakpoint-small) {
+        margin-left: auto;
+        margin-right: auto;
+        /*max-width: 85vw;
+                width: 85%;*/
+
+        .page-title {
+          font-size: 50px;
+          line-height: 42px;
+        }
+      }
+
+      @media (max-width: 435px) {
+        .page-title {
+          font-size: 35px;
+          line-height: 38px;
+        }
+      }
+
+      h1 {
+        margin-bottom: 40px;
+      }
+    }
+
+    .title-container {
+      display: flex;
+      /*margin-left: 17vw;*/
+      width: 77vw;
+      max-width: 1400px;
+      margin: 0 auto;
+      align-items: baseline;
+
+      @media (max-width: 1386px) {
+        /*margin-left: 240px;*/
+        padding-top: 0;
+      }
+
+      @media (max-width: $breakpoint-small) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100vw;
+        width: 100%;
+        flex-direction: column-reverse;
+      }
+
+      h1 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 0.8em;
+        margin-right: -240px; //-310px;
+        max-width: 100%;
+
+        @media (min-width: 1920px) {
+          margin-right: 0;
+        }
+
+        @media (max-width: 1386px) {
+          margin-right: -100px;
+        }
+
+        @media (max-width: 1300px) {
+          margin-right: -200px;
+        }
+
+        @media (max-width: 992px) {
+          margin-right: -210px;
+        }
+
+        @media (max-width: $breakpoint-small) {
+          margin-right: 0;
+          margin-left: 20px;
+        }
+      }
+
+      img {
+        margin-right: 100px;
+        padding-bottom: 85px;
+        width: 20%;
+        width: 20vw;
+        height: auto;
+        max-width: 280px;
+
+        @media (max-width: 1400px) {
+          padding-bottom: 30px;
+        }
+
+        @media (max-width: 1024px) {
+          margin-right: 0;
+        }
+
+        @media (max-width: 992px) {
+          margin-right: 20px;
+        }
+
+        @media (max-width: 920px) {
+          padding-bottom: 100px;
+        }
+
+        @media (max-width: $breakpoint-small) {
+          width: 45%;
+          width: 45vw;
+          margin-right: 0;
+          padding-bottom: 30px;
+          align-self: flex-end;
+        }
+      }
+    }
+
+    .search-zip-container {
+      width: 77vw;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+      /*margin-left: 17vw;*/
+      margin-top: 20px;
+
+      @media (max-width: 1386px) {
+        /*margin-left: 240px;*/
+      }
+
+      @media (max-width: $breakpoint-small) {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .search-box {
+        padding-top: 30px;
+        padding-right: 30px;
+        padding-left: 30px;
+        width: fit-content;
+        background-color: $white-color;
+
+        @media (max-width: 1400px) {
+          padding-top: 20px;
+          padding-right: 20px;
+          padding-left: 20px;
+        }
+
+        /*@media (max-width: $breakpoint-small) {
+                    width: calc(90vw - 40px);
+                }*/
+
+        p {
+          width: 100%;
+          text-align: center;
+          font-family: $ciutadellaRegular;
+          color: $app-black;
+          margin-block-end: 0;
+          margin-block-start: 0;
+          font-size: 16px;
+          line-height: 22px;
+
+          a {
+            color: $app-black;
+            text-decoration: underline;
+          }
+
+          @media (max-width: 1400px) {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .shop-button {
+      padding: 7px 30px 5px 30px;
+      background-color: $app-tomato;
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    transition: 0.5s ease;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: $app-yellow;
+    opacity: 0;
+  }
+
+  .middle {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 5;
+    width: 80%;
+  }
+
+  .carousel-item-container {
+    height: 370px;
+
+    @media (max-width: $breakpoint-small) {
+      height: 309px;
+    }
+
+    .react-multiple-carousel__arrow {
+      z-index: 1;
+      background-color: transparent;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::before {
+        color: $app-black;
+        opacity: 0.2;
+      }
+
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    .react-multiple-carousel__arrow--left {
+      left: calc(38% - 1px);
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        left: calc(38% - 4px);
+      }
+
+      @media (max-width: 1024px) {
+        left: calc(30% - 1px);
+
+        &:hover {
+          left: calc(30% - 4px);
+        }
+      }
+
+      @media (max-width: $breakpoint-small) {
+        left: calc(4% - 1px);
+
+        &:hover {
+          left: calc(4% - 4px);
+        }
+      }
+    }
+
+    .react-multiple-carousel__arrow--right {
+      right: calc(38% - 1px);
+      transition: all 0.3s ease-out;
+
+      &:hover {
+        right: calc(38% - 4px);
+      }
+
+      @media (max-width: 1024px) {
+        right: calc(30% - 1px);
+
+        &:hover {
+          right: calc(30% - 4px);
+        }
+      }
+
+      @media (max-width: $breakpoint-small) {
+        right: calc(4% - 1px);
+
+        &:hover {
+          right: calc(4% - 4px);
+        }
+      }
+    }
+  }
+
+  &.carousel-item-container-PA {
+    .carousel-item-container {
+      .react-multiple-carousel__arrow--left {
+        left: calc(32% - 1px);
+
+        &:hover {
+          left: calc(32% - 4px);
+        }
+
+        @media (max-width: $breakpoint-small) {
+          left: calc(4% - 1px);
+
+          &:hover {
+            left: calc(4% - 4px);
+          }
+        }
+      }
+
+      .react-multiple-carousel__arrow--right {
+        right: calc(32% - 1px);
+
+        &:hover {
+          right: calc(32% - 4px);
+        }
+
+        @media (max-width: $breakpoint-small) {
+          right: calc(4% - 1px);
+
+          &:hover {
+            right: calc(4% - 4px);
+          }
+        }
+      }
+    }
+  }
+
+  .carousel-item-container-PA {
+    .react-multiple-carousel__arrow--left {
+      left: calc(30% - 1px);
+
+      &:hover {
+        left: calc(30% - 4px);
+      }
+
+      @media (max-width: $breakpoint-small) {
+        left: calc(4% - 1px);
+
+        &:hover {
+          left: calc(4% - 4px);
+        }
+      }
+    }
+
+    .react-multiple-carousel__arrow--right {
+      right: calc(30% - 1px);
+
+      &:hover {
+        right: calc(30% - 4px);
+      }
+
+      @media (max-width: $breakpoint-small) {
+        right: calc(4% - 1px);
+
+        &:hover {
+          right: calc(4% - 4px);
+        }
+      }
+    }
+  }
+
+  .carousel-container {
+    justify-content: center;
+
+    .react-multi-carousel-item--active {
+      .carousel-image-container {
+        &.center-item {
+          cursor: pointer;
+          img {
+            width: 90%;
+          }
+
+          &:hover {
+            .middle {
+              display: flex;
+            }
+
+            .overlay {
+              display: block;
+            }
+
+            img {
+              width: 95%;
+            }
+          }
+        }
+
+        &.not-center {
+          &:hover img {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+
+  .carousel-image-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    min-height: 219px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    @media (max-width: $breakpoint-small) {
+      padding-left: 15%;
+      padding-right: 15%;
+    }
+
+    .middle {
+      opacity: 1;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      /*width: 70%;*/
+      padding: 15px;
+      // word-break: break-all;
+
+      .text {
+        overflow-wrap: break-word;
+
+        .title {
+          font-family: $forzaBold;
+          font-size: 20px;
+          color: $app-black;
+        }
+
+        .sub-title {
+          margin-bottom: 0;
+          font-family: $ciutadellaBold;
+          font-size: 18px;
+          color: $white-color;
+        }
+      }
+    }
+
+    .overlay {
+      opacity: 0.8;
+      display: none;
+      width: 80%;
+    }
+
+    .img-content {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 70%;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain !important;
+        object-position: center;
+      }
+    }
+  }
+
+  .about-content {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    color: $app-black;
+    margin-bottom: 100px;
+
+    @media (max-width: 1024px) {
+      width: 33%;
+    }
+
+    @media (max-width: $breakpoint-small) {
+      width: 90%;
+    }
+
+    .lime-link-btn {
+      display: inline-block;
+      width: 100%;
+      background-color: $app-lime;
+      font-family: $ciutadellaBold;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: normal;
+      color: $white-color;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 15px 0px 14px;
+
+      &:hover {
+        background: $yellow;
+      }
+
+      @media only screen and (max-width: 575px) {
+        width: 100%;
+      }
+    }
+
+    h5 {
+      text-align: center;
+      font-family: $ciutadellaBold;
+      font-size: 20px;
+      margin-block-end: 0.7em;
+    }
+
+    p {
+      margin-block-start: 0;
+      text-align: center;
+      font-family: $ciutadellaRegular;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  .review-section {
+    background-image: url("../resources/images/home/testimonialBg.webp");
+    background-repeat: no-repeat;
+    max-width: 87%;
+    background-color: rgba(186, 198, 195, 0.3);
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    width: 964px;
+
+    // @media (max-width: 1300px) {
+    //     width: 90%;
+    // }
+
+    @media (max-width: $breakpoint-small) {
+      width: 100%;
+    }
+
+    .reviews-carousel {
+      z-index: 2;
+      background-color: transparent; //$white-color;
+      max-width: 87%;
+      width: 964px;
+      margin: auto;
+
+      @media (max-width: $breakpoint-small) {
+        width: 85%;
+        padding-bottom: 40px;
+        padding-top: 40px;
+      }
+
+      .reviews-carousel-container {
+        background-color: $white-color;
+      }
+
+      .reviews-carousel-dotList {
+        margin-top: 20px;
+        position: relative;
+        margin-bottom: -20px;
+        overflow: hidden;
+      }
+
+      .react-multi-carousel-dot-list {
+        li {
+          margin: 0px 10px 0px 0px;
+          line-height: 6px;
+
+          button {
+            width: 6px;
+            height: 6px;
+            border: none;
+            border-radius: 100%;
+            margin: 0px;
+            background-color: $input-border-grey;
+          }
+
+          &.react-multi-carousel-dot--active button {
+            background-color: $app-black;
+          }
+
+          &:last-child {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+
+    img {
+      z-index: 10;
+      position: relative;
+      margin-left: 30px;
+      margin-bottom: -50px;
+
+      @media (max-width: $breakpoint-small) {
+        margin-left: 15px;
+      }
+    }
+
+    .review-text {
+      padding-top: 50px;
+      padding-bottom: 20px;
+      height: 100%;
+      // height: 218px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h5 {
+        color: $app-black;
+        font-size: 24px;
+        line-height: 30px;
+        font-family: $ciutadellaBold;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        // padding-top: 20px;
+        margin-block-end: 1em;
+      }
+
+      p {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        color: $app-grey;
+        font-family: $ciutadellaMedium;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .blog-section {
+    max-width: 87%;
+    width: 964px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      object-fit: cover;
+    }
+
+    .home-blog {
+      position: relative;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba($app-yellow, 0.9);
+        opacity: 0;
+        transition: all 0.3s ease-out;
+      }
+
+      &:before {
+        content: "";
+        width: 64px;
+        height: 64px;
+        /*border: 2px solid white;*/
+        border-radius: 500px;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        background: url(../resources/images/blog/Next_Button_BlogHover_Outline_KO.svg)
+          center no-repeat;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 0.3s ease-out;
+        box-sizing: border-box;
+      }
+      &:hover {
+        text-decoration: none;
+        &:before,
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
+    .blog-row-1 {
+      width: 70%;
+
+      .product-blog {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        .prod-blog-text {
+          padding: 30px 40px 0 40px;
+          width: 65%;
+
+          .prod-sub-text {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 20px;
+
+            .blogpost {
+              max-height: 110px;
+              overflow: hidden;
+            }
+          }
+
+          h6 {
+            color: $app-grey;
+            font-family: $ciutadellaRegular;
+            font-size: 14px;
+            line-height: 18px;
+          }
+
+          h1 {
+            color: $app-black;
+            font-family: $forzaMedium;
+          }
+
+          .subtext {
+            margin-block-start: 0;
+          }
+
+          h3 {
+            font-family: $ciutadellaMedium;
+            color: $app-dark-grey;
+          }
+
+          p,
+          span {
+            font-family: $ciutadellaRegular;
+            color: $app-black;
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+
+        .prod-blog-image {
+          width: 35%;
+          .prod-blog-image__contain {
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .blog-row-2 {
+      width: 28%;
+
+      .well-blog-image {
+        position: relative;
+
+        h6 {
+          position: absolute;
+          top: 35px;
+          left: 20px;
+          color: $app-black;
+          font-family: $ciutadellaRegular;
+          font-size: 14px;
+          line-height: 18px;
+          background-color: #ffffff70;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .well-blog {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 20px;
+
+        h2 {
+          font-family: $forzaMedium;
+          color: $dark-green;
+        }
+
+        h3 {
+          font-family: $ciutadellaRegular;
+          color: $app-dark-grey;
+        }
+
+        span {
+          font-family: $ciutadellaRegular;
+          color: $app-black;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .blog-row-1,
+    .blog-row-2 {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid $app-light-grey;
+      position: relative;
+
+      &:hover .overlay {
+        opacity: 0.8;
+      }
+
+      &:hover .middle {
+        opacity: 1;
+      }
+
+      .middle {
+        button {
+          background-color: transparent;
+          border: none;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      @media (max-width: $breakpoint-small) {
+        display: none;
+      }
+    }
+  }
+
+  .blog-carousel {
+    display: none;
+
+    @media (max-width: $breakpoint-small) {
+      display: block;
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    .custom-dot-list-style {
+      justify-content: flex-end !important;
+      padding-bottom: 20px !important;
+      padding-right: 40px !important;
+
+      @media (max-width: $breakpoint-small) {
+        width: 90%;
+        margin: auto;
+        padding: 0 !important;
+      }
+    }
+
+    .blog-carousel-item {
+      width: 90%;
+      margin: auto;
+      position: relative;
+      border: 1px solid #bac6c3;
+
+      &:hover .overlay {
+        opacity: 0.8;
+      }
+
+      &:hover .middle {
+        opacity: 1;
+      }
+    }
+
+    .blog-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-bottom: 20px;
+      height: 582px;
+
+      .well-blog-image {
+        position: relative;
+        height: 45%;
+
+        h6 {
+          position: absolute;
+          top: 30px;
+          left: 20px;
+          color: $white-color;
+          font-family: $ciutadellaMedium;
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .well-blog {
+        width: 80%;
+        margin: auto;
+        padding-bottom: 20px;
+
+        h2 {
+          font-family: $forzaMedium;
+        }
+
+        h3 {
+          font-family: $ciutadellaRegular;
+          color: $app-dark-grey;
+        }
+
+        a {
+          font-family: $ciutadellaRegular;
+          color: $app-black;
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+
+  .instagram-images {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    max-width: 87%;
+    width: 964px;
+    margin: auto;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint-small) {
+      width: 100%;
+      overflow: scroll;
+    }
+
+    .insta-feed {
+      display: block;
+      width: 18%;
+
+      position: relative;
+
+      .middle {
+        width: 100%;
+      }
+
+      &:hover {
+        text-decoration: none;
+        .middle {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: $breakpoint-small) {
+        width: fit-content;
+        margin-left: 5vw;
+      }
+    }
+
+    .insta-image {
+      width: 100%;
+
+      @media (max-width: $breakpoint-small) {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  }
+
+  .social-handle {
+    max-width: 87%;
+    width: 964px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 80px;
+
+    @media (max-width: $breakpoint-small) {
+      margin-top: 10px;
+      margin-bottom: 60px;
+    }
+
+    a {
+      text-decoration: none;
+      color: $app-black;
+    }
+
+    h5 {
+      color: $app-black;
+      font-family: $ciutadellaBold;
+      font-size: 24px;
+    }
+  }
+}

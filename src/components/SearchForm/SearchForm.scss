@@ -1,0 +1,177 @@
+@import "../../styles/config";
+
+.search-form {
+	width: 100%;
+	padding: 25px 15px 17px;
+	position: fixed;
+	z-index: 2;
+	top: 70px;
+	right: 0;
+	background: #213F34;
+	box-sizing: border-box;
+	opacity: 	0;
+	visibility: hidden;
+
+	*:focus {
+		outline: none;
+	}
+
+	&.active,
+	&:hover,
+	&:focus {
+		/*opacity: 1;
+		visibility: visible;*/
+
+		/*+ .search-icon {
+			background: url(./../../resources/images/header/NAV_Search_Icon_KO_hover.svg);
+		}*/
+		.search-submit {
+			&:after {
+				background: url(./../../resources/images/header/NAV_Search_Icon_KO_hover.svg) center no-repeat;
+			}
+		}
+	}
+
+	@media (min-width: $breakpoint-large) {
+		width: auto;
+		padding: 0;
+		min-width: 20px;
+		min-height: 27px;
+		display: inline-block;
+		position: absolute;
+		z-index: 0;
+		top: auto;
+		/*right: 25px;*/
+		/*opacity: 1;
+		visibility: visible;*/
+		background: transparent;
+
+		/*&.active {
+			#search-input {
+				width: 273px;
+				opacity: 1;
+				visibility: visible;
+			}
+		}*/
+	}
+}
+
+#search-input {
+	width: 100%;
+	height: 27px;
+	border: none;
+	border-bottom: 1px solid white;
+	background-color: transparent;
+	box-shadow: none;
+	color: white;
+	@media (min-width: $breakpoint-large) {
+		width: 0;
+		padding-right: 20px;
+		opacity: 0;
+		visibility: hidden;
+		transition: all 0.3s ease-out;
+	}
+}
+
+#search-input::-webkit-input-placeholder { /* Edge */
+  font: normal normal normal 16px/24px "Ciutadella Regular";
+	color: white;
+	opacity: 0.5;
+}
+
+#search-input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font: normal normal normal 16px/24px "Ciutadella Regular";
+	color: white;
+	opacity: 0.5;
+}
+
+#search-input::placeholder {
+  font: normal normal normal 16px/24px "Ciutadella Regular";
+	color: white;
+	opacity: 0.5;
+}
+
+.search-submit {
+	opacity: 0;
+	visibility: hidden;
+	padding: 0;
+	border: none;
+	position: absolute;
+	z-index: 1;
+  	right: 23px;
+  	top: 36%;
+	background: transparent;
+	cursor: pointer;
+
+	span {
+		display: none;
+	}
+	&:after {
+		content: '';
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		background: url(./../../resources/images/header/NAV_Search_Icon_KO.svg) center no-repeat;
+	}
+
+	@media (min-width: $breakpoint-large) {
+		opacity: 1;
+		visibility: visible;
+		right: 0;
+		top: 5px;
+	}
+}
+
+.header {
+	position: relative;
+	.search-icon:hover,
+	.search-bar-active .search-icon {
+		background: url(./../../resources/images/header/NAV_Search_Icon_KO_hover.svg);
+	}
+
+	.search-icon {
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.header .right-side {
+	position: static;
+	@media (min-width: $breakpoint-large) {
+		position: relative;
+		&:hover,
+		&:focus {
+			.search-input {
+				width: 273px;
+				opacity: 1;
+				visibility: visible;
+			}
+			.search-submit {
+				&:after {
+					background: url(./../../resources/images/header/NAV_Search_Icon_KO_hover.svg) center no-repeat;
+				}
+			}
+		}
+	}
+}
+
+.search-bar-active {
+	.search-form {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	@media (min-width: $breakpoint-large) {
+
+		#search-input {
+			width: 273px;
+			opacity: 1;
+			visibility: visible;
+		}
+		.search-submit {
+			&:after {
+				background: url(./../../resources/images/header/NAV_Search_Icon_KO_hover.svg) center no-repeat;
+			}
+		}
+	}
+}

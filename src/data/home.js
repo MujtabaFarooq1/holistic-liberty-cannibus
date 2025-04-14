@@ -1,0 +1,77 @@
+const homeStrings = {
+  title: "Home",
+  link: "/",
+  description: "Welcome to Liberty cannabis. @libertycannabis",
+  home_title: "Home",
+  home_headtitle: "Welcome to Liberty Cannabis",
+  invalid_zip: "Please enter valid zipcode.",
+  something_wrong: "Something went wrong.",
+  shop_now: "SHOP NOW",
+  dispensary_near_you: "Is there a Liberty dispensary near you?",
+  dispensary_near_you1: "Is there a",
+  dispensary_near_you_link: "Liberty dispensary",
+  dispensary_near_you2: "near you?",
+  zip_placeholder: "see locations",
+  enter_zip: "Enter zip code here.",
+  go: "GO",
+  are_you_21: "Are you 21 or older?*",
+  i_am_old_enough: "I’M OLD ENOUGH",
+  i_am_not: "I’M NOT",
+  blog: "BLOG",
+  read_more: "READ MORE",
+  sorry: "SORRY",
+  you_must_be_over_age: "You must be at least 21 years old to enter the site.",
+  please_comeback_when_you_are: "Please come back for a visit when you are.",
+  back: "BACK",
+  result_not_found_title: "Not finding what you’re looking for?",
+  result_not_found_description:
+    "Try a different search, browse these popular pages, or contact your local dispensary directly.",
+  not_close_msg: "WISH YOU WERE CLOSER...",
+  enter_email: "Enter your email",
+  stay_touch: "STAY IN TOUCH",
+  not_close_detail1:
+    "Unfortunately, there are currently no Liberty dispensaries within ",
+  not_close_detail2:
+    "miles of your location, but we’re expanding quickly. Be the first to know if a location opens near you.",
+  all_dispensaries: "All Dispensaries",
+  all_locations: "All Locations",
+  store_hours: "Store Hours:",
+  make_my_store: "Make this my store",
+  our_locations: "Our locations",
+  join_community: "Join the cannabis community",
+  earn_rewards: "EARN LIBERTY REWARDS",
+  dream: "A cannabis lover’s dream",
+  know_before: "KNOW BEFORE YOU GO",
+  faqs: "FAQs about your local dispensary",
+  testimonial:
+    "Great customer service. [Liberty’s] curbside pickup during this pandemic is second to none.",
+  testimonial_by: "- Michael, Philadelphia",
+  pennsylvania_and_maryland_notice:
+    "*For Pennsylvania and Maryland you must be 18+.",
+  agree_to: "Agree to",
+  concentrates: "Concentrates",
+  about_concentrates: "Higher potency products for experienced users",
+  flower: "FLOWER",
+  about_flower: "Indica, sativa, or hybrid—strains that fit every mood",
+  devices: "DEVICES",
+  about_devices:
+    "Full range of tabletop and portable vaporizers and cartridges",
+  edibles: "Edibles",
+  about_edibles: "Cannabis-infused foods—discreet and portable",
+  oils: "Oils",
+  about_oils:
+    "Made from premium cannabis; converted into a potent and therapeutic liquid",
+  about_content_title: "How do you take your cannabis?",
+  about_content_message:
+    "Shop a variety of flower, vapes, concentrates, edibles, and more through your local Liberty location.",
+  somerville_about_content_title:
+    "Looking for local transportation options to get to our Somerville store?",
+  somerville_about_btnLable: "Click Here",
+  somerville_about_btnLink:
+    "https://www.mbta.com/transit-near-me?_utf8=%E2%9C%93&location%5Baddress%5D=304+Somerville+Ave%2C+Somerville%2C+MA+02143-2917%2C+United+States&location%5Blatitude%5D=42.38004038221206&location%5Blongitude%5D=-71.09752251352069",
+  become_a_patient: "BECOME A PATIENT",
+  learn: "LEARN",
+  rewards: "REWARDS",
+}
+
+module.exports = homeStrings

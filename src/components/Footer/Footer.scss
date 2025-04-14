@@ -1,0 +1,264 @@
+@import "../../styles/config";
+
+.footer {
+    height: $bottom-bar-height;
+    width: 100%;
+    background-color: $app-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 20;
+    padding: 5px;
+    box-sizing: border-box;
+    color: $white-color;
+
+    @media (max-width: $breakpoint-small) {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .left-side,
+    .right-side {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        //   @media (max-width: $breakpoint-small) {
+        //     margin-left: auto!important;
+        //     margin-right: auto!important;
+        // }
+    }
+
+    .left-side {
+        margin-left: 100px;
+
+        @media (max-width: 992px) {
+            margin-left: 20px;
+        }
+        .logo-container {
+            img {
+                width: 170px;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .menu {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+
+            // @media (max-width: $breakpoint-small) {
+            //     margin-left: 5px;
+            // }
+
+            .menu-item {
+                margin-bottom: 5px;
+                text-decoration: none;
+                color: $app-black;
+                font-family: $ciutadellaBold;
+                text-transform: uppercase;
+
+                &:hover {
+                    color: $app-lime;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        @media (max-width: $breakpoint-small) {
+            padding-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            // flex-direction: row-reverse;
+            justify-content: space-between
+        }
+    }
+
+    .right-side {
+        margin-right: 100px;
+        flex-direction: column;
+
+        @media (max-width: 992px) {
+            margin-right: 20px;
+        }
+        @media (max-width: $breakpoint-small) {
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            margin-top: 30px;
+        }
+
+        .email-form {
+            border-bottom: 1px solid $app-black;
+            white-space: nowrap;
+
+            // @media (max-width: $breakpoint-small) {
+            //     max-width: 100%;
+            // }
+
+            @media (max-width: $breakpoint-small) {
+                width: 90%;
+            }
+
+            .email-input {
+                background-color: transparent;
+                border: none;
+                padding-bottom: 5px;
+                color: $app-black;
+                font-family: $ciutadellaRegular;
+                font-size: 16px;
+                line-height: 24px;
+                width: 348px;
+
+                &:focus {
+                    outline: none;
+                }
+
+                @media (max-width: $breakpoint-small) {
+                    width: 85%;
+                }
+
+            }
+
+            .email-send {
+                background-color: transparent;
+                border: none;
+                color: $app-black;
+
+                &:focus {
+                    outline: none;
+                }
+
+                @media (max-width: $breakpoint-small) {
+                    width: 15%;
+                    float: right;
+                    text-align: right;
+                }
+            }
+        }
+
+        .validation-error {
+
+            color: $app-tomato;
+            text-align: left;
+            width: 100%;
+            font-size: 12px;
+            font-family: $ciutadellaRegular;
+            margin-bottom: 0;
+            height: 13px;
+
+
+            @media (max-width: $breakpoint-small) {
+                width: 90%;
+            }
+
+        }
+
+        .social-btn-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: 100%;
+            margin-top: 40px;
+
+            @media (max-width: $breakpoint-small) {
+                margin-top: 20px;
+                justify-content: center;
+            }
+
+            .instagram,
+            .twitter,
+            .facebook {
+                background-repeat: no-repeat;
+                width: 16px;
+                height: 16px;
+                background-size: contain;
+
+            }
+
+            .instagram {
+                background-image: url("../../resources/images/footer/instagram.svg");
+                margin-right: 10px;
+
+                &:hover {
+                    background-image: url("../../resources/images/footer/instagram_active.svg");
+                }
+            }
+
+            // .twitter {
+            //   background-image: url("../../resources/images/footer/twitter.png");
+            //   margin-right: 10px;
+            //   width: 20px;
+            // }
+
+            .facebook {
+                background-image: url("../../resources/images/footer/facebook.svg");
+
+                &:hover {
+                    background-image: url("../../resources/images/footer/facebook_active.svg");
+                }
+            }
+        }
+
+        .terms-privacy,
+        .copyright {
+            display: flex;
+            flex-direction: row;
+            font-size: 14px;
+            font-family: $ciutadellaRegular;
+            width: 100%;
+            justify-content: flex-end;
+            margin-top: 40px;
+            color: $app-black;
+
+            @media (max-width: $breakpoint-small) {
+                margin-top: 20px;
+                justify-content: center;
+            }
+
+            a {
+                color: $app-black;
+            }
+
+            div {
+                width: 1px;
+                height: 18px;
+                margin: 0 10px;
+                background-color: $app-black;
+            }
+        }
+
+        .copyright {
+            margin-top: 0;
+
+            p {
+                font-size: 14px;
+                font-family: $ciutadellaRegular;
+                margin-block-start: 0;
+                margin-bottom: 0;
+            }
+
+            .copyright-number {
+                margin-top: 15px;
+            }
+        }
+
+    }
+}
+
+html body .acsb-trigger {
+    background-color: $dark-green !important;
+    bottom: 6px !important;
+    right: 5px !important;
+}
+body .acsb-trigger.acsb-trigger-size-small,
+body .acsb-trigger.acsb-trigger-size-medium {
+    width: 38px;
+    height: 38px;
+}
+
+body .acsb-trigger.acsb-trigger-position-y-center {
+    margin: auto 0 0;
+}

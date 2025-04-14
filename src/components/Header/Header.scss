@@ -1,0 +1,185 @@
+@import "../../styles/config";
+
+.header-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9998;
+  .header {
+    position: relative;
+    top: 0;
+    height: $top-bar-height;
+    width: 100%;
+    background-color: $app-black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    box-sizing: border-box;
+    color: $white-color;
+
+    &.hide {
+      top: -70px;
+    }
+
+    .center-title {
+      cursor: pointer;
+
+      &:hover {
+        img {
+          content: url("../../resources/images/header/header_logo_hover.svg");
+        }
+      }
+    }
+
+    .left-side,
+    .right-side {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .left-side {
+      margin-left: 10px;
+    }
+
+    .right-side {
+      margin-right: 20px;
+    }
+
+    .store-address {
+      @media (max-width: $breakpoint-small) {
+        display: none;
+      }
+    }
+
+    .left-bar-toggle {
+      background: url("../../resources/images/header/hamburger.svg") center
+        no-repeat;
+      width: 36px;
+      height: 34px;
+      padding: 10px !important;
+
+      &:hover {
+        background: url("../../resources/images/header/hamburger_hover.svg")
+          center no-repeat;
+      }
+    }
+
+    .close-toggle {
+      background: url("../../resources/images/Close_X_white.svg") center
+        no-repeat;
+      width: 36px;
+      height: 34px;
+      padding: 10px !important;
+
+      span {
+        display: none;
+      }
+
+      &:hover {
+        color: $app-yellow;
+        background: url("../../resources/images/Close_X_yellow.svg") center
+          no-repeat;
+      }
+    }
+
+    .left-bar-toggle,
+    .search-icon,
+    .close-toggle {
+      background-repeat: no-repeat;
+      cursor: pointer;
+      color: $white-color;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search-icon {
+      background: url("../../resources/images/header/NAV_Search_Icon_KO.svg");
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .location-mobile {
+    display: none;
+    height: $address-bar-height;
+    width: 100%;
+    background-color: $light-green;
+    padding: 5px;
+    box-sizing: border-box;
+    color: $white-color;
+
+    @media (max-width: $breakpoint-small) {
+      display: flex;
+      position: relative;
+      // top: $top-bar-height;
+    }
+  }
+
+  .store-address {
+    position: absolute;
+    left: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+    .icon-container {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      background: url("../../resources/images/header/Location_Finder_Icon_KO.svg")
+        center no-repeat;
+      img {
+        display: none;
+      }
+    }
+
+    @media (max-width: $breakpoint-small) {
+      left: 20px;
+    }
+
+    &:hover {
+      .icon-container {
+        background: url("../../resources/images/header/Location_Finder_Icon_KO_hover.svg")
+          center no-repeat;
+      }
+    }
+
+    .addr-container {
+      display: flex;
+      flex-direction: column;
+      padding-left: 10px;
+
+      a {
+        text-decoration: underline;
+      }
+
+      a,
+      p {
+        font-size: 12px;
+        line-height: 16px;
+        white-space: nowrap;
+        color: $white-color;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        span {
+          margin-left: 3px;
+        }
+
+        .link {
+          cursor: pointer;
+          margin-left: 0;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+#hkoAccessibilityFrame {
+  bottom: 0;
+  top: auto !important;
+}

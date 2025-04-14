@@ -1,0 +1,254 @@
+@import "../../../styles/config";
+
+
+/*Blog Listing*/
+.blog-listing {
+	margin: 47px 0 61.5px;
+
+	.inner-wrap {
+		width: 727px;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.filter-nav {
+		margin: 0 0 58px;
+		overflow-x: auto;
+		text-align: center;
+		white-space: nowrap;
+
+		button {
+			padding: 0;
+			margin: 0 15px;
+			border: none;
+			background: none;
+			color: $app-lime;
+			font: normal normal bold 14px/24px "Ciutadella Bold";
+			letter-spacing: 0px;
+			text-transform: uppercase;
+			text-align: left;
+			cursor: pointer;
+			white-space: nowrap;
+			&:nth-child(2) {
+				margin-left: 0;
+			}
+
+			&:nth-last-child(2) {
+				margin-right: 0;
+			}
+			&:after {
+				content: '';
+				display: block;
+				margin-top: 0;
+				transition: margin 0.2s;
+			}
+
+			&:hover {
+				&:after {
+					margin-top: 11.5px;
+					border-bottom: 2px solid $app-lime;
+				}
+			}
+			&.active {
+				color: $dark-green;
+				&:after {
+					margin-top: 11.5px;
+					border-bottom: 2px solid $dark-green;
+				}
+			}
+
+			&:focus {
+				outline: none;
+			}
+
+			&.tab-scroll-icon {
+                width: 25px;
+                height: 25px;
+				margin: 0;
+                display: none;
+                position: absolute;
+                outline: 0;
+                transition: all .5s;
+                z-index: 2;
+                border: 0;
+                opacity: 1;
+                cursor: pointer;
+
+                border-radius: 50%;
+                background: rgba(black,0.5);
+
+                &:before {
+                    color: $app-lime;
+                    // opacity: 0.2;
+                    font-size: 15px;
+                    display: block;
+                    font-family: revicons;
+                    text-align: center;
+                    z-index: 2;
+                    position: relative;
+                }
+
+                &.prev-tab {
+                    left: 5px;
+                    &:before {
+                        content: "\E824";
+                    }
+                }
+                &.next-tab {
+                    right: 5px;
+
+                    &:before {
+                        content: "\E825";
+                    }
+                }
+
+                &:after {
+                	content: none !important;
+                }
+
+
+                @media (max-width: 	616px) {
+                    display: inline-block !important;
+                }
+
+                @media (max-width: 	510px) {
+                    width: 20px;
+                	height: 20px;
+                	&.prev-tab {
+                    	left: 1px;
+                   	}
+                   	&.next-tab {
+                    	right: 1px;
+                    }
+
+                	&:before {
+                		font-size: 10px;
+                		line-height: 22px;
+                	}
+                }
+            }
+		}
+
+		@media (min-width: 	788px) {
+			button {
+				margin: 0 30px;
+			}
+		}
+
+		@media (max-width: 600px) {
+			justify-content: flex-start;
+		}
+	}
+
+	.filtered-posts {
+		@media (min-width: 768px) {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+	}
+
+	.post-item {
+		padding: 16px;
+		margin: 0 0 20px;
+		display: flex;
+		position: relative;
+		box-sizing: border-box;
+		&:after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba($app-yellow, 0.9);
+			opacity: 0;
+			transition: all 0.3s ease-out;
+		}
+
+		&:before {
+			content: '';
+			width: 64px;
+			height: 64px;
+			/*border: 2px solid white;*/
+			border-radius: 500px;
+			display: block;
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			left: 50%;
+			background: url(./../../../resources/images/blog/Next_Button_BlogHover_Outline_KO.svg) center no-repeat;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			transition: all 0.3s ease-out;
+			box-sizing: border-box;
+		}
+		&:hover {
+			text-decoration: none;
+			&:before,
+			&:after {
+				opacity: 1;
+			}
+		}
+		img {
+			width: 112px;
+			max-width: 100%;
+			max-height: 130px;
+			display: block;
+			float: left;
+			margin-right: 20px;
+			object-fit: cover;
+			object-position: left;
+		}
+
+		&.img-position-change {
+			img {
+				object-position: center right;
+			}
+		}
+
+		@media (min-width: 768px) {
+			width: 46.1%;
+		}
+	}
+
+	.post-content-wrap {
+		width: calc(100% - 132px);
+		float: right;
+	}
+
+	.post-title {
+		margin-bottom: 3px;
+		font: normal normal 500 18px/20px "Forza Medium";
+		letter-spacing: 0;
+		color: $dark-green;
+		white-space: pre-line;
+	}
+
+	.post-description {
+		margin: 0 0 5px;
+		font: normal normal normal 16px/22px "Ciutadella Regular";
+		letter-spacing: 0;
+		color: $light-green;
+	}
+
+	.post-date {
+		font: normal normal 500 14px/18px "Ciutadella Medium";
+		letter-spacing: 0.84px;
+		color: rgba($light-green, 0.8);
+		text-transform: uppercase;
+	}
+
+	.blog-hr {
+		margin: 50px 0;
+	}
+}

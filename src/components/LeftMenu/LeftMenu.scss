@@ -1,0 +1,160 @@
+@import "../../styles/config";
+
+.left-bar-container {
+  background-color: transparent;
+  position: absolute;
+  left: 0;
+  top: $top-bar-height;
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  height: calc(100vh - #{$top-bar-height});
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 9999;
+  position: fixed;
+
+  &.hide {
+    left: -100vw;
+    overflow: hidden;
+
+    @media (max-width: $breakpoint-small) {
+      left: -1000px;
+    }
+  }
+
+  .left-bar-sub-container {
+    min-width: 222px;
+    width: 16%;
+    height: 100%;
+    background-color: $app-black;
+
+    @media (max-width: 450px) {
+      width: 100%;
+    }
+  }
+
+  .menu-list {
+    margin-bottom: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .menu-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 40px;
+    padding-top: 22px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+
+    color: $white-color;
+
+    p {
+      font-family: $ciutadellaMedium !important;
+      font-size: 16px !important;
+      line-height: 16px !important;
+
+      color: $white-color;
+      margin-bottom: 0;
+    }
+
+    .menu-chevron {
+      opacity: 0;
+      width: 100%;
+      margin-right: 100px;
+      text-align: right;
+      transition: 0.3s ease-out;
+    }
+
+    &.active,
+    &:hover {
+      cursor: pointer;
+      p {
+        color: $app-yellow;
+      }
+
+      color: $app-yellow;
+      background-color: $app-lime-op;
+
+      .menu-chevron {
+        opacity: 1;
+        margin-right: 20px;
+      }
+    }
+
+    p {
+      white-space: nowrap;
+    }
+
+    @media (max-width: 1350px) {
+      padding-left: 20px;
+    }
+  }
+
+  .separator {
+    background-color: $app-light-grey;
+    height: 1px;
+    opacity: 0.5;
+    width: 100%;
+  }
+
+  .bottom {
+    width: 100%;
+    height: calc(100vh - 600px);
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (max-height: 630px) {
+      height: 30px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .social-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+
+    .instagram,
+    .twitter,
+    .facebook {
+      background-repeat: no-repeat;
+      width: 26px;
+      height: 21px;
+      background-size: contain;
+    }
+
+    .instagram {
+      // background-image: url("../../resources/images/LeftBar/instagram.png");
+      margin-right: 10px;
+      &:hover {
+        svg {
+          path {
+            fill: $app-yellow;
+          }
+        }
+      }
+    }
+
+    .twitter {
+      background-image: url("../../resources/images/LeftBar/twitter.svg");
+      margin-right: 10px;
+    }
+
+    .facebook {
+      &:hover {
+        svg {
+          path {
+            fill: $app-yellow;
+          }
+        }
+      }
+      //background-image: url("../../resources/images/LeftBar/facebook.svg");
+    }
+  }
+}

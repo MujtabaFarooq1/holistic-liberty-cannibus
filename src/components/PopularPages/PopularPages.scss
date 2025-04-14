@@ -1,0 +1,138 @@
+@import "../../styles/config";
+
+.popular-pages-component {
+	.inner-wrap-wide {
+		padding-bottom: 106px;
+	}
+
+	@media (max-width: $breakpoint-small) {
+		.inner-wrap-wide {
+			max-width: 100%;
+		}
+	}
+
+	.ppc-grid {
+		@media (min-width: $breakpoint-large) {
+			display: flex;
+			// justify-content: space-between;
+			justify-content: space-evenly;
+		}
+	}
+
+	.ppc-title {
+		width: calc(100% - 48px);
+		margin-bottom: 8px;
+		float: left;
+		font: normal normal bold 30px/28px "Forza Bold";
+		letter-spacing: -0.6px;
+		color: $dark-orange;
+		text-transform: uppercase;
+	}
+
+	.ppc-description {
+		margin: 0;
+		color: white;
+		font: normal normal 600 16px/22px "Ciutadella Bold";
+		opacity: 1;
+		transition: opacity 0.3s ease-out;
+
+		@media (min-width: $breakpoint-large) {
+			opacity: 0;
+			transform: translateY(50px);
+		}
+	}
+
+	.ppc-arrow {
+		width: 48px;
+		height: 48px;
+		border-radius: 100px;
+		float: right;
+		background-color: white;
+		opacity: 0;
+
+		img {
+			width: 48px;
+			opacity: 0;
+			transform: translateX(-75px);
+			transition: all 0.25s;
+		}
+	}
+
+	.ppc-item {
+		width: 100%;
+		min-height: 150px;
+		padding: 45px 15px 17px 20px;
+		margin-bottom: 10px;
+		display: block;
+		box-sizing: border-box;
+		text-decoration: none;
+		overflow: hidden;
+
+		> * {
+			transition: all 0.25s ease-out;
+		}
+
+		&:hover {
+			text-decoration: none;
+			.ppc-title {
+				color: $app-black;
+			}
+
+			.ppc-arrow {
+				opacity: 1;
+				img {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
+
+			.ppc-description {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		@media (min-width: $breakpoint-large) {
+			width: 32.06%;
+			margin: 0;
+			float: left;
+		}
+
+		
+	}
+
+	.three-cols {
+		@media (min-width: $breakpoint-large) {
+			width: 32.06%;
+		}
+	}
+	.Col-width {
+		@media (min-width: $breakpoint-large) {
+			width: 49%;
+		}
+	}
+
+	.ppc-become-patient {
+		background-color: $app-yellow;
+	}
+
+	.ppc-rewards {
+		background-color: $app-tomato;
+		.ppc-title {
+			color: $dark-orange;
+		}
+	}
+
+	.ppc-know-before-go {
+		background-color: $dark-orange;
+		.ppc-title {
+			color: $app-yellow;
+		}
+	}
+
+	.clearfix::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+	}
+}

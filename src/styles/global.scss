@@ -1,0 +1,196 @@
+@import "config";
+
+body {
+    margin: 0;
+    font-family: $ciutadellaRegular;
+    width: 100%;
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden !important;
+
+    .page-content-wrap {
+        width: 100%;
+        width: 100vw;
+        text-align: center;
+        max-width: 100%;
+
+
+        .page-content {
+            width: 100%;
+            width: 100vw;
+            max-width: 100%;
+
+            .inner-content-wrap {
+                width: 68%;
+                width: 68vw;
+                max-width: 100%;
+                margin: 50px auto;
+
+                @media (max-width: $breakpoint-large) {
+                    width: 90%;
+                    width: 90vw;
+                    margin: 10px auto;
+                }
+                @media (max-width: $breakpoint-small) {
+                    width: 100%;
+                    width: 100vw;
+                    margin: 10px auto;
+                }
+                @media (max-width: $breakpoint-very-small) {
+                    width: 100%;
+                    width: 100vw;
+                    margin: 10px auto;
+
+                }
+            }
+        }
+    }
+}
+
+
+.btn.big-btn {
+    font-family: $forzaBold;
+    text-transform: uppercase;
+    letter-spacing: -0.6px;
+
+    line-height: 28px;
+    font-size: 30px;
+
+    &.btn-yellow {
+        background-color: $app-yellow;
+        color: $dark-orange;
+    }
+    &.btn-orange {
+        background-color: $dark-orange;
+        color: $app-yellow;
+    }
+    &.btn-red {
+        background-color: $app-tomato;
+        color: $dark-orange;
+    }
+}
+.global-pink{
+	background-color: $app-red;
+	color: $white-color;
+}
+
+@font-face {
+    font-family: "Ciutadella Bold";
+    src: url("../resources/fonts/ciutadella-bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Ciutadella SemiBold";
+    src: url("../resources/fonts/ciutadella-semibold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Ciutadella Medium";
+    src: url("../resources/fonts/ciutadella-medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Ciutadella Regular";
+    src: url("../resources/fonts/ciutadella-regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Forza Black";
+    src: url("../resources/fonts/Forza-Black.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Forza Bold";
+    src: url("../resources/fonts/Forza-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Forza Medium";
+    src: url("../resources/fonts/Forza-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Forza Book";
+    src: url("../resources/fonts/Forza-Book.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Forza Light";
+    src: url("../resources/fonts/Forza-Light.ttf") format("truetype");
+}
+
+.menu-container,
+.page-container-layout {
+    margin-top: $top-bar-height;
+
+    @media (max-width: $breakpoint-small) {
+        &.location-selected {
+            margin-top: calc(#{$top-bar-height} + #{$address-bar-height});
+        }
+    }
+}
+
+.inner-wrap-wide {
+    max-width: 87%;
+    width: 964px;
+    margin: 0 auto;
+}
+
+.inner-wrap {
+    max-width: 87%;
+    width: 768px;
+    margin: 0 auto;
+}
+
+.h1-forza {
+    overflow-wrap: break-word;
+    font-family: $forzaBold;
+    font-size: 90px;
+    line-height: 76px;
+    color: $app-black;
+
+    @media (max-width: 1386px) {
+        font-size: 75px;
+        line-height: 68px;
+    }
+
+    @media (max-width: 464px) {
+        font-size: 50px;
+        line-height: 42px;
+    }
+}
+
+.body-text {
+    font-family: $ciutadellaRegular;
+    font-size: 16px;
+    line-height: 22px;
+    color: $app-black;
+}
+
+.h3-subheads-forza {
+    font-size: 30px;
+    line-height: 32px;
+    font-family: $forzaBold;
+    color: $app-black;
+}
+
+.h5-subheads-ciutadella {
+    font-size: 24px;
+    line-height: 30px;
+    font-family: $ciutadellaBold;
+    color: $app-black;
+}
+
+.h6-subheads-ciutadella {
+    font-size: 20px;
+    line-height: 26px;
+    font-family: $ciutadellaBold;
+    color: $app-black;
+}
+
+.body-ciutadella {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: $ciutadellaRegular;
+    color: $app-black;
+}
